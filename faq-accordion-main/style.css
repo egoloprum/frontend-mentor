@@ -1,0 +1,90 @@
+:root {
+   --ff-sans: 'Poppins', sans-serif;
+
+   --clr-white: hsl(0, 0%, 100%);
+   --clr-pink: hsl(275, 100%, 97%);
+   --clr-grayish: hsl(292, 16%, 49%);
+   --clr-dark: hsl(292, 53%, 50%);
+
+   --fw-light: 400;
+   --fw-normal: 600;
+   --fw-bold: 700;
+}
+
+*, **::before, *::after {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: var(--ff-sans);
+   margin: 0;
+   height: 100%;
+   width: 100%;
+}
+
+.wrapper {
+   background: var(--clr-pink);
+   padding: 8rem;
+   background-image: url(assets/images/background-pattern-desktop.svg);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.card {
+   position: absolute;
+   top: 20%;
+   padding: 2rem;
+   border: 1px solid #000;
+   border-radius: 1rem;
+   background: var(--clr-white);
+   max-width: 450px;
+   font-size: 14px;
+}
+
+.card h1 {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+.card .question {
+   border-bottom: 1px solid #e2e2e2;
+}
+
+.card .question:last-child {
+   border-bottom: none;
+}
+
+.card .question .title {
+   font-weight: var(--fw-bold);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   cursor: pointer;
+}
+
+.card .question .title:hover {
+   background: var(--clr-pink);
+   padding: 0.1rem;
+}
+
+.card .question .title span:first-child:hover {
+   color: var(--clr-dark);
+}
+
+.card .question .sentence {
+   font-weight: var(--fw-light);
+   color: var(--clr-grayish);
+   display: none;
+   transition: ease 0.5s;
+}
+
+@media (max-width: 500px) {
+   .wrapper {
+      background-image: url(assets/images/background-pattern-mobile.svg);
+   }
+   .card {
+      margin: 1rem;
+   }
+}
