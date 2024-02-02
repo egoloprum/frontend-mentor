@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;0,900;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <div class="card">
+        <div>
+          <div class="top">
+            <p><span class="date">DAY</span><input  type="text" id="day"><span class="error" id="day-error">This field is required</span></p>
+            <p><span class="date">MONTH</span><input  type="text" id="month"><span class="error" id="month-error">This field is required</span></p>
+            <p><span class="date">YEAR</span><input  type="text" id="year"><span class="error" id="year-error">This field is required</span></p>
+          </div>
+
+          <div class="bottom">
+            <h1><span id="result-year">--</span><span>years</span></h1>
+            <h1><span id="result-month">--</span><span>months</span></h1>
+            <h1><span id="result-day">--</span><span>days</span></h1>
+          </div>
+        </div>
+        <div class="middle">
+          <img id="button" src="assets/images/icon-arrow.svg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+  </body>
+</html>
