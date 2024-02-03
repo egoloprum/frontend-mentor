@@ -1,0 +1,276 @@
+:root {
+   --ff-sans: 'Poppins', sans-serif;
+
+   --clr-orange: hsl(35, 77%, 62%);
+   --clr-red: hsl(5, 85%, 63%);
+   --clr-white: hsl(36, 100%, 99%);
+   --clr-grayish: hsl(233, 8%, 79%);
+   --clr-dark-grayish: hsl(236, 13%, 42%);
+   --clr-very-dark: hsl(240, 100%, 5%);
+
+   --fw-light: 400;
+   --fw-normal: 600;
+   --fw-bold: 700;
+
+   --fs-small-h: 22px;
+   --fs-big-h: 28px;
+   --fs-p: 16px;
+
+}
+
+*, **::before, *::after {
+   box-sizing: border-box;
+}
+
+body {
+   height: 100vh;
+   margin: 0;
+   font-family: sans-serif;
+}
+
+.wrapper {
+   padding: 3rem;
+   margin: 1rem;
+   margin-inline: 8rem;
+}
+
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.navbar .navbar-btns {
+   display: flex;
+   gap: 2rem;
+   color: var(--clr-dark-grayish);
+   font-size: var(--fs-p);
+}
+
+.navbar .navbar-icon {
+   display: none;
+   cursor: pointer;
+}
+
+.hero {
+   margin-block: 2rem;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 2rem;
+   grid-auto-rows: minmax(100px, auto);
+}
+
+.hero .one {
+   grid-column: 1 / 3;
+   grid-row: 1;
+}
+
+.hero .one img {
+   height: 100%;
+   width: 100%;
+}
+
+.hero .two {
+   grid-column: 1;
+   grid-row: 2;
+   font-size: var(--fs-big-h);
+   font-weight: 800;
+}
+
+.hero .two h1 {
+   margin: 0;
+   line-height: 60px;
+}
+
+.hero .three {
+   grid-column: 2;
+   grid-row: 2;
+   display: flex;
+   flex-direction: column;
+}
+
+.hero .three p {
+   font-size: var(--fs-p);
+   color: var(--clr-dark-grayish);
+   line-height: 25px;
+}
+
+.hero .three button {
+   margin-top: auto;
+   max-width: 250px;
+   padding: 1rem;
+   padding-inline: 3rem;
+   font-size: 20px;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   color: var(--clr-white);
+   font-weight: var(--fw-bold);
+   background: var(--clr-very-dark);
+   cursor: pointer;
+}
+
+.hero .four {
+   grid-column: 3;
+   grid-row: 1 / 3;
+   background: var(--clr-very-dark);
+   padding: 1rem;
+   padding-inline: 1.5rem;
+}
+
+.hero .four h2 {
+   color: var(--clr-orange);
+   font-size: 48px;
+   margin: 0;
+   margin-block: 1.25rem;
+}
+
+.list {
+   display: flex;
+   flex-direction: column;
+
+}
+
+.list div {
+   padding-bottom: .5rem;
+   padding-top: 1.25rem;
+}
+
+.list > div:nth-child(2) {
+   border-top: 0.1px solid var(--clr-dark-grayish);
+   border-bottom: 0.1px solid var(--clr-dark-grayish);
+}
+
+.list > div h4 {
+   color: var(--clr-white);
+   font-size: var(--fs-small-h);
+   margin: 0;
+}
+
+.list > div h4:hover {
+   color: var(--clr-orange);
+   cursor: pointer;
+}
+
+.list > div p {
+   color: var(--clr-dark-grayish);
+   font-size: var(--fs-p);
+   line-height: 25px;
+}
+
+.hero .five {
+   grid-column: 1;
+   grid-row: 3;
+   display: flex;
+   gap: 1.5rem;
+}
+
+.bottom-img {
+   max-height: 150px;
+}
+
+.bottom-h3 {
+   font-size: 36px;
+   color: var(--clr-grayish);
+   margin: 0;
+}
+
+.bottom-h5 {
+   font-size: 18px;
+   margin-block: 1.2rem;
+   cursor: pointer;
+}
+
+.bottom-h5:hover {
+   color: var(--clr-orange);
+}
+
+.bottom-p {
+   color: var(--clr-dark-grayish);
+   margin: 0;
+}
+
+.hero .six {
+   grid-column: 2;
+   grid-row: 3;
+   display: flex;
+   gap: 1.5rem;
+}
+
+.hero .seven {
+   grid-column: 3;
+   grid-row: 3;
+   display: flex;
+   gap: 1.5rem;
+}
+
+@media (max-width: 500px) {
+
+   body {
+      padding: 1rem;
+      width: 90%;
+   }
+
+   .sidebar {
+      position: absolute;
+      width: 70%;
+      background: var(--clr-white);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      display: none;
+   }
+
+   .sidebar .side-list {
+      display: flex;
+      flex-direction: column;
+      margin-left: 2rem;
+      gap: 1rem;
+      font-size: var(--fs-small-h);
+   }
+
+   #side-icon {
+      position: absolute;
+      cursor: pointer;
+      top: 3%;
+      right: 10%;
+   }
+
+   .navbar {
+      margin-bottom: 1rem;
+   }
+
+   .navbar .navbar-btns {
+      display: none;
+   }
+   
+   .navbar .navbar-icon {
+      display: block;
+   }
+
+   .wrapper {
+      padding: 0;
+      margin: 0;
+   }
+
+   .hero {
+      display: flex;
+      flex-direction: column;
+      margin-block: 0;
+      grid-template-columns: none;
+      gap: 2rem;
+      grid-auto-rows: 0;
+      width: 100%;
+   }
+   .hero > div {
+      width: 100%;
+   }
+   .hero .four {
+      padding: 0;
+   }
+   .hero .four h2, .list {
+      margin: 1rem;
+   }
+
+}
