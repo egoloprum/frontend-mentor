@@ -1,0 +1,120 @@
+:root {
+   --ff-sans: 'Poppins', sans-serif;
+
+   --clr-dark-cyan: hsl(158, 36%, 37%);
+   --clr-cream: hsl(30, 38%, 92%);
+
+   --clr-dark-blue: hsl(212, 21%, 14%);
+   --clr-grayish-blue: hsl(228, 12%, 48%);
+   --clr-white: hsl(0, 0%, 100%);
+}
+
+*, **::before, *::after {
+   box-sizing: border-box;
+}
+
+
+body {
+   font-family: var(--ff-sans);
+   margin: 0;
+}
+
+.wrapper {
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: var(--clr-cream);
+}
+
+.card {
+   border-radius: 1rem;
+   max-width: 600px;
+   display: flex;
+   flex-direction: row;
+   gap: 1rem;
+   background: var(--clr-white);
+}
+
+.card .left {
+   width: 100%;
+   
+}
+
+.left img {
+   width: 100%;
+   height: 100%;
+   border-top-left-radius: 1rem;
+   border-bottom-left-radius: 1rem;
+}
+
+.card .right {
+   width: 100%;
+   background: var(--clr-white);
+   border-top-right-radius: 1rem;
+   border-bottom-right-radius: 1rem;
+}
+
+.detail {
+   padding: 1rem;
+   padding-right: 2rem;
+}
+
+.detail .floral {
+   color: var(--clr-grayish-blue);
+}
+
+.detail .price {
+   display: flex;
+   align-items: center;
+   gap: 2rem;
+}
+
+.detail .price h1 {
+   color: var(--clr-dark-cyan);
+}
+
+.detail .price p {
+   text-decoration: line-through;
+   text-decoration-thickness: 1px;
+   text-decoration-color: var(--clr-grayish-blue);
+}
+
+button {
+   padding: .75rem;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: var(--clr-dark-cyan);
+   color: var(--clr-white);
+   gap: .5rem;
+   font-weight: 550;
+   border: none;
+   border-radius: .5rem;
+   cursor: pointer;
+}
+
+@media (max-width: 500px) {
+   .card {
+      margin: 1rem;
+      display: flex;
+      flex-direction: column;
+   }
+   .left img {
+      object-fit: cover;
+      max-height: 300px;
+      border-radius: 0;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+   }
+   .right {
+      border-radius: 0;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+   }
+   .detail {
+      padding-top: 0;
+      padding: 1rem;
+   }
+}
