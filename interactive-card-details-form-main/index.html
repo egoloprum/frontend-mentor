@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;0,900;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
+
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <div class="left">
+      </div>
+      <div class="right">
+        <div class="card">
+          <div class="top">
+            <span class="label">Cardholder Name</span>
+            <input type="text" id="input-name" placeholder="e.g. Jane Appleseed">
+            <span class="error" id="error-name">Can't be blank</span>
+          </div>
+          <div class="top">
+            <span class="label">Card Number</span>
+            <input type="text" id="input-number" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+            <span class="error" id="error-number">Wrong format, numbers only</span>
+          </div>
+          <div class="bottom">
+            <div class="exp-date">
+              <span class="label">Exp. Date (MM/YY)</span>
+              <span>
+                <input type="text" id="input-month" placeholder="MM" max="12" min="0">
+                <input type="text" id="input-year" placeholder="YY" min="24">
+              </span>
+              <span class="error" id="error-date">Can't be blank</span>
+            </div>
+            <div class="cvc">
+              <span class="label">CVC</span>
+              <input type="text" id="input-cvc" placeholder="e.g. 123">
+              <span class="error" id="error-cvc">Can't be blank</span>
+            </div>
+          </div>
+
+          <div class="button">
+            <button id="card-button">Confirm</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-1">
+        <img class="card-1-img" src="images/bg-card-front.png" alt="">
+        <div class="card-1-inner">
+          <img src="images/card-logo.svg" alt="">
+          <div class="numbers" id="numbers">
+            <span>0000</span>
+            <span>0000</span>
+            <span>0000</span>
+            <span>0000</span>
+          </div>
+          <div class="card-detail">
+            <span class="name" id="card-name">Jane Appleseed</span>
+            <span class="card-date">
+              <span id="card-month">00</span>/
+              <span id="card-year">00</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-2">
+        <img class="card-2-img" src="images/bg-card-back.png" alt="">
+        <span class="card-back" id="card-cvc">000</span>
+      </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+
+  </body>
+</html>
