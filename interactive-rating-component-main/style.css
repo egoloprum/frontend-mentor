@@ -1,0 +1,121 @@
+:root {
+--clr-orange: hsl(25, 97%, 53%);
+
+--clr-white: hsl(0, 0%, 100%);
+--clr-light: hsl(217, 12%, 63%);
+--clr-medium: hsl(216, 12%, 54%);
+--clr-dark: hsl(213, 19%, 18%);
+--clr-very-dark: hsl(216, 12%, 8%);   
+}
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+   font-family: sans-serif;
+}
+
+.wrapper {
+   min-height: 100vh;
+   background: var(--clr-very-dark);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.card {
+   background: var(--clr-dark);
+   max-width: 400px;
+   color: var(--clr-white);
+   padding: 2rem;
+   display: flex;
+   flex-direction: column;
+   border-radius: 1rem;
+}
+
+.card-2 {
+   background: var(--clr-dark);
+   max-width: 400px;
+   color: var(--clr-white);
+   padding: 2rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   border-radius: 1rem;
+   display: none;
+}
+
+.selected {
+   padding: .5rem;
+   padding-inline: 1rem;
+   border-radius: 1rem;
+   color: var(--clr-orange);
+   background: var(--clr-very-dark);
+   width: fit-content;
+}
+.card-2 h1 {
+   margin-bottom: 0;
+}
+.card-2 .e {
+   color: var(--clr-medium);
+}
+
+.icon {
+   background: var(--clr-medium);
+   width: fit-content;
+   height: 40px;
+   padding: .75rem;
+   border-radius: 50%;
+}
+.icon img {
+   width: 16px;
+   height: 16px;
+}
+
+.balls {
+   display: flex;
+   justify-content: space-between;
+   gap: 1rem;
+}
+
+.balls .ball {
+   width: 100%;
+   max-width: 40px;
+   aspect-ratio: 1;
+   background: var(--clr-medium);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   cursor: pointer;
+}
+.balls .ball:hover {
+   background: var(--clr-light);
+}
+
+.submit {
+   margin-top: 1.5rem;
+   padding-block: .75rem;
+   text-transform: uppercase;
+   font-weight: 550;
+   color: var(--clr-white);
+   background: var(--clr-orange);
+   border-radius: 1rem;
+   cursor: pointer;
+}
+.submit:hover {
+   color: var(--clr-orange);
+   background: var(--clr-white);
+}
+
+.card p {
+   color: var(--clr-light);
+   margin-block: 1rem;
+}
+.card h1 {
+   margin-block: 1rem;
+   margin-bottom: 0;
+}
