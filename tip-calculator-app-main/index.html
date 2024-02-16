@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <img src="images/logo.svg" alt="">
+      <div class="card">
+        <div class="left">
+          <div class="left-top">
+            <p class="label">Bill</p>
+            <input class="bill-input" type="number" placeholder="0">
+          </div>
+
+          <div class="left-mid">
+            <p class="label">Select tip %</p>
+            <div class="tips">
+              <div class="tip">5%</div>
+              <div class="tip">10%</div>
+              <div class="tip">15%</div>
+              <div class="tip">25%</div>
+              <div class="tip">50%</div>
+              <div class="tip" id="custom-tip">Custom</div>
+            </div>
+          </div>
+
+          <div class="left-bot">
+            <p class="label">Number of People</p>
+            <input class="people-input" type="number" placeholder="0">
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="amount">
+            <p>
+              <span class="cost-top">Tip Amount</span>
+              <span class="cost-bot">/ person</span>
+            </p>
+            <p class="cost" id="tip-cost">$<span>0.00</span></p>
+          </div>
+
+          <div class="total">
+            <p>
+              <span class="cost-top">Total</span>
+              <span class="cost-bot">/ person</span>
+            </p>
+            <p class="cost" id="total-cost">$<span>0.00</span></p>
+          </div>
+
+          <div class="reset-btn">
+            <button>RESET</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
