@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Todo app</title>
+
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body id="body" style="background: var(--clr-very-dark-desat);">
+
+    <div class="wrapper">
+      <div class="top">
+        <img src="images/bg-desktop-dark.jpg" alt="">
+      </div>
+      
+      <div class="card">
+        <div class="navbar">
+          <h1>Todo</h1>
+          <img class="color-switch" src="images/icon-sun.svg" alt="">
+        </div>
+
+        <div class="new-list">
+          <div class="button">
+            <span class="add-ball">
+              <img src="images/icon-check.svg" alt="">
+            </span>
+          </div>
+          <input class="add-list" type="text" placeholder="Create a new todo...">
+        </div>
+
+        <div class="list">
+          <div class="list-item active" draggable="true"  id="1">
+            <div class="button">
+              <span class="ball" id="ball-1" onclick="active_changer(this.id)">
+                <img src="images/icon-check.svg" alt="">
+              </span>
+            </div>
+            <div class="list-elem" id="elem-1">Complete online course</div>
+          </div>
+
+          <div class="list-item active" draggable="true"  id="2">
+            <div class="button">
+              <span class="ball" id="ball-2" onclick="active_changer(this.id)">
+                <img src="images/icon-check.svg" alt="">
+              </span>
+            </div>
+            <div class="list-elem" id="elem-2">Jog around the park</div>
+          </div>
+
+          <div class="list-item active" draggable="true"  id="3">
+            <div class="button">
+              <span class="ball" id="ball-3" onclick="active_changer(this.id)">
+                <img src="images/icon-check.svg" alt="">
+              </span>
+            </div>
+            <div class="list-elem" id="elem-3">10 minutes meditation</div>
+          </div>
+
+          <div class="list-item active" draggable="true"  id="4">
+            <div class="button">
+              <span class="ball" id="ball-4" onclick="active_changer(this.id)">
+                <img src="images/icon-check.svg" alt="">
+              </span>
+            </div>
+            <div class="list-elem" id="elem-4">Road for 1 hour</div>
+          </div>
+
+          <div class="list-item active" draggable="true"  id="5">
+            <div class="button">
+              <span class="ball" id="ball-5" onclick="active_changer(this.id)">
+                <img src="images/icon-check.svg" alt="">
+              </span>
+            </div>
+            <div class="list-elem" id="elem-5">Pick up groceries</div>
+          </div>
+
+          <div class="list-item active" draggable="true"  id="6">
+            <div class="button">
+              <span class="ball" id="ball-6" onclick="active_changer(this.id)">
+                <img src="images/icon-check.svg" alt="">
+              </span>
+            </div>
+            <div class="list-elem" id="elem-6">Complete Todo App</div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <p class="item-left">
+            <span id="items-left"></span> items left
+          </p>
+          <p class="footer-mid">
+            <span id="btn-all">All</span>
+            <span id="btn-active">Active</span>
+            <span id="btn-completed">Completed</span>
+          </p>
+          <p class="footer-bot">Clear Completed</p>
+        </div>
+
+        <p class="responsive-footer">
+          <span id="res-btn-all">All</span>
+          <span id="res-btn-active">Active</span>
+          <span id="res-btn-completed">Completed</span>
+        </p>
+
+        <p class="drag-order">Drag and drop to reorder list</p>
+      </div>
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
